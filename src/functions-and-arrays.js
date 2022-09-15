@@ -61,45 +61,55 @@ console.log("Iteration 3 --> " + sumNumbers(numbers));
 
 
 // Iteration #3.1 Bonus:
-// function sum(array) {
-//   if (array.length === 0){
-//     return 0;
+function sum(someArray) {
+  if (someArray.length === 0){
+    return 0;
+  } else if (Array.isArray(someArray)){
+    
+  }
+}
 
-//   } else if (typeof array === 'number') {
-//     let sum = 0;
-//     array.forEach(element => {
-//       sum += element;
-      
-//     })
-//     return sum;
-
-//   } else if (typeof array === 'string'){
-//     let sum = 0;
-//     array.forEach(element => {
-//       sum += element;
-      
-//     })
-//     return sum;
-//   }
-// }
-
-
-// console.log("Iteration 3.1.1 --> " + sum(numbers));
-// console.log("Iteration 3.1.2 --> " + sum(words));
-// console.log("Iteration 3.1.1 --> " + sum());
+console.log("Iteration 3.1.1 --> " + sum(numbers));
+console.log("Iteration 3.1.2 --> " + sum(words));
+console.log("Iteration 3.1.1 --> " + sum(words));
 
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arrayNum) {
+  if (arrayNum.length === 0){
+    return null;
+  } else {
+  let sum = 0;
+  arrayNum.forEach(element => {
+    sum += element;
+  });
 
+  let sumAvg = sum / arrayNum.length;
+
+  return sumAvg;
+}
+}
+
+console.log("Iteration 4 --> " + averageNumbers(numbersAvg));
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arrayWords) {
+  if (arrayWords.length === 0){
+    return null;
+  } else {
+    let sumLength = 0;
+    arrayWords.forEach(element => {
+      sumLength += element.length;
+    })
+    let sumAvg = sumLength / arrayWords.length;
+    return sumAvg;
+  }
+ }
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -119,7 +129,20 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arrayWords) {
+  if (arrayWords.length === 0){
+    return null;
+  } else {
+    arrayWords.forEach(element => {
+
+    })
+  }
+}
+
+let arr = [2, 3, 9, 9, 9];
+console.log(arr.indexOf(9,));
+// console.log(wordsUnique.includes('crab', -wordsUnique.length));
+
 
 
 // Iteration #6: Find elements
