@@ -133,16 +133,21 @@ function uniquifyArray(arrayWords) {
   if (arrayWords.length === 0){
     return null;
   } else {
+    let newArray = [];
     arrayWords.forEach(element => {
+      if (!newArray.includes(element)){
+        newArray.push(element);
+      }
 
     })
+    return newArray;
+
   }
+
+  
 }
 
-let arr = [2, 3, 9, 9, 9];
-console.log(arr.indexOf(9,));
-// console.log(wordsUnique.includes('crab', -wordsUnique.length));
-
+console.log("Iteration 5 --> " + uniquifyArray(wordsUnique));
 
 
 // Iteration #6: Find elements
