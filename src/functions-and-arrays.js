@@ -179,9 +179,24 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(arrayWords, word) {
+  if (arrayWords.length === 0){
+    return 0;
+  } else {
+    let count = 0;
+    if (arrayWords.includes(word)) {
+      
+    arrayWords.forEach(element => {
+      if(element === word) {
+        count++;
+      }
+    })
+  }
+  return count;
+}
+}
 
-
+console.log("Iteration 7 --> " + howManyTimes(wordsCount, 'machine'));
 
 // Iteration #8: Bonus
 const matrix = [
